@@ -1,2 +1,2 @@
-# pos-flask
-Point of Sale Application running with the Flask microframework
+# POS Flask
+A point of sale application developed with the Flask microframework. 
