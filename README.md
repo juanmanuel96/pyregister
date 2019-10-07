@@ -1,4 +1,4 @@
-# POS Flask
+# PyRegister
 A point of sale application developed with the Flask microframework. This application will give the user a complete 
 personalized experience. 
 
