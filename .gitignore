@@ -3,3 +3,12 @@ source/__pycache__/config.cpython-37.pyc
 source/__pycache__/routes.cpython-37.pyc
 source/cash_register/__pycache__/views.cpython-37.pyc
 source/cash_register/__pycache__/__init__.cpython-37.pyc
+source/__pycache__/libraries.cpython-37.pyc
+source/mongo_flask/__pycache__/helpers.cpython-37.pyc
+source/__pycache__/libraries.cpython-37.pyc
+source/main/__pycache__/__init__.cpython-37.pyc
+source/main/__pycache__/views.cpython-37.pyc
+source/mongo_flask/__pycache__/__init__.cpython-37.pyc
+source/mongo_flask/__pycache__/about.cpython-37.pyc
+source/mongo_flask/__pycache__/mongo.cpython-37.pyc
+source/mongo_flask/__pycache__/wrappers.cpython-37.pyc

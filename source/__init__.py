@@ -1,4 +1,4 @@
-from .libraries import Flask, LoginManager, PyMongo
+from .libraries import Flask, LoginManager, MongoFlask
 from source.config import *
 from .main import main
 
@@ -8,7 +8,8 @@ login_manager = LoginManager(pos)
 # login_manager.blueprint_login_views = { 'main' : '/login' }
 login_manager.login_message = "Enter your credentials"
 login_manager.session_protection = 'strong'
-mongo = PyMongo(pos)
+mongo = MongoFlask(pos)
+mongo.set_Database('pyregister')
 
 @login_manager.user_loader
 def load_user(uid):
