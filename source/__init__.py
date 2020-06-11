@@ -1,7 +1,7 @@
 from .libraries import Flask, LoginManager, MongoFlask, register_config
 from .config import *
 from .main import main
-# from .register_config import register_config
+from .staff import Staff
 
 pos = Flask(__name__)
 pos.config.from_object(Config)
@@ -14,7 +14,18 @@ login_manager.session_protection = 'strong'
 
 @login_manager.user_loader
 def load_user(uid):
-    pass
+    _user = Staff.get_user(uid)
+    if _user is None:
+        return None
+    else:
+        return Staff(
+            eid= _user['eid'],
+            username= _user['username'],
+            first_name= _user['first_name'],
+            last_name= _user['last_name'],
+            account_type= _user['account_type'],
+            is_approved= _user['is_approved']
+        )
 
 # MongoDB configuration
 mongo = MongoFlask(pos)
@@ -25,7 +36,8 @@ mongo.set_Database('pyregister')
 @pos.context_processor
 def set_jinja_globals():
     return {
-        'company' : register_config.json_data.get('compnay', 'PyRegister')
+        'company_brand' : register_config.json_data.get('compnayBrand', 'PyRegister'),
+        'theme' : register_config.json_data.get('theme', 'light')
     }
 
 # Blueprint Registry

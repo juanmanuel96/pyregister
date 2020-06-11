@@ -1,4 +1,4 @@
-from .libraries import UserMixin
+from .libraries import UserMixin, current_app
 
 class Staff(UserMixin):
     is_authenticated = True
@@ -14,7 +14,7 @@ class Staff(UserMixin):
         self.is_approved = is_approved
     
     def get_uid(self):
-        return self.uid
+        return self.eid
     
     def user_to_json(self):
         return {
@@ -25,3 +25,12 @@ class Staff(UserMixin):
             'account_type':self.account_type,
             'is_approved':self.is_approved
         }
+    
+    # Static Method for geting the user to be used by Login Manager
+    @staticmethod
+    def get_user(uid=0):
+        if uid == 0:
+            pass
+        else:
+            collection = current_app.mongo_flask.set_Collection('users')
+            return collection.find_one({'eid' : uid})

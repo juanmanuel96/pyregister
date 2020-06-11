@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+}
+
+/* Main */
+.container {
+    margin: 0 1em;
+    height: 100vh;
+    background: white;
+}
+
+header {
+    margin: 0;
+    padding: 10px;
+}
+
+.logo {
+    text-align: center;
+}
