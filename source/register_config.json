@@ -1,6 +1,5 @@
 {
     "companyName" : "pyregsiter",
     "companyBrand" : "PyRegister",
-    "tax" : 0.115,
-    "theme" : "light"
+    "tax" : 0.115
 }

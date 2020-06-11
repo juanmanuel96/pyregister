@@ -36,8 +36,7 @@ mongo.set_Database('pyregister')
 @pos.context_processor
 def set_jinja_globals():
     return {
-        'company_brand' : register_config.json_data.get('compnayBrand', 'PyRegister'),
-        'theme' : register_config.json_data.get('theme', 'light')
+        'company_brand' : register_config.json_data.get('compnayBrand', 'PyRegister')
     }
 
 # Blueprint Registry

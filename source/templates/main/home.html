@@ -1,5 +1,22 @@
 {% extends 'main/layout.html' %}
 
 {% block body %}
-
+<div class="sub-container">
+    <nav class="menu-nav">
+        <ul class="nav-pills">
+            <li class="pill"><a href="#appetizer" class="pill-link"></a>Appetizers</li>
+            <li class="pill"><a href="#main-dish" class="pill-link">Main Dish</a></li>
+        </ul>
+    </nav>
+    <div class="menu">
+        <section id="appetizer" class="menu-div">
+            <section class="cell">this is</section>
+            <section class="cell">the menu</section>
+        </section>
+        <section id="main-dish" class="menu-div">
+            <section class="cell">this is</section>
+            <section class="cell">the menu</section>
+        </section>
+    </div>
+</div>
 {% endblock %}
