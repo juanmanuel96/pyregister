@@ -1,6 +1,4 @@
-from source import pos
-
-# pos = create_app()
+from source import pos, os
 
 if __name__ == '__main__':
     pos.run()

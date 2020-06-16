@@ -1,4 +1,4 @@
-from .libraries import Flask, LoginManager, MongoFlask, register_config
+from .libraries import Flask, LoginManager, mongo, register_config
 from .config import *
 from .main import main
 from .staff import Staff
@@ -28,7 +28,8 @@ def load_user(uid):
         )
 
 # MongoDB configuration
-mongo = MongoFlask(pos)
+# mongo = MongoFlask(pos)
+mongo.init_app(pos)
 mongo.set_Database('pyregister')
 
 # This context processor will be used to add global variables that

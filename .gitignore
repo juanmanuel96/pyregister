@@ -20,3 +20,6 @@ source/register_config/__pycache__/helpers.cpython-37.pyc
 source/__pycache__/libraries.cpython-37.pyc
 source/__pycache__/libraries.cpython-37.pyc
 source/__pycache__/staff.cpython-37.pyc
+source/__pycache__/libraries.cpython-37.pyc
+source/main/__pycache__/views.cpython-37.pyc
+.vscode/settings.json
