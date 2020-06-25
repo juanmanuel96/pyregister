@@ -6,6 +6,3 @@ from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Le
 from .mongo_flask import MongoFlask
 import json, os
 from .register_config import register_config
-
-# Some global variable definitions
-mongo = MongoFlask()
